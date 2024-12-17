@@ -70,7 +70,7 @@ Hi there! 👋 I'm Shubham, a passionate **Flutter Developer**, **Full-Stack Dev
 
 ### 📫 **Connect with Me**
 - 🌐 [Portfolio Website](https://shubhamdube.in)
-- 💼 [LinkedIn]([https://www.linkedin.com/in/shubhamdubey](https://www.linkedin.com/in/shubham-dubey-4042a2294/))
+- 💼 [LinkedIn](https://www.linkedin.com/in/shubham-dubey-4042a2294/)
 - 🐦 [Twitter](https://twitter.com/shubham_dubey4)
 - 📧 [Email](mailto:itzshubhamofficial@gmail.com)
 
