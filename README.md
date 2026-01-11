@@ -4,23 +4,6 @@ Hi there! 👋 I'm Shubham, a passionate **Flutter Developer**, **Full-Stack Dev
 
 ---
 
-### 🌟 **About Me**
-- 🔭 **Current Projects:**  
-  - Building a **Task Management Application** using **Next.js, Firebase, and MongoDB**.
-  - Building **College Leaderboard Platform** for encouraging students in our college towards *learning skills*.
-  - Working in team as leader to develop **Mobile Application for our college** to enhance their user experience and **ease to access**.
-
-- 🌱 **Currently Learning:**  
-  - Advanced **Flutter** for Mobile app development.
-  - **Next.js** for building more scalable and interactive web app.  
-  - Best practices in **real-time application/system design**.
-
-- 🤝 **Collaboration Interests:**  
-  - Open-source development.  
-  - Projects leveraging **Mobile Apps**, **Web Automation**, and **AI**.  
-
----
-
 ### 🛠️ **Tech Stack**
 #### **Frameworks & Tools**
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
