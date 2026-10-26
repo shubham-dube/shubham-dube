@@ -1,0 +1,20 @@
+.meter {
+  display: inline-flex;
+  gap: 3px;
+  flex: none;
+}
+
+.pip {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line-strong);
+}
+
+.pip[data-on] {
+  background: var(--fg);
+}
+
+.pip[data-on]:nth-child(3) {
+  background: var(--accent);
+}

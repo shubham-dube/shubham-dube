@@ -1,0 +1,139 @@
+.pipeline {
+  display: grid;
+  gap: var(--s-6);
+  padding: var(--s-6);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+.pipeline figcaption {
+  color: var(--fg-3);
+}
+
+.steps {
+  position: relative;
+  display: grid;
+  gap: var(--s-6);
+}
+
+/* The rail and its travelling signal. */
+.steps::before,
+.steps::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2.2rem;
+  bottom: 1rem;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.steps::after {
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  height: 30%;
+  bottom: auto;
+  animation: travel-y 3.2s var(--ease-in-out) infinite;
+}
+
+.step {
+  position: relative;
+  display: grid;
+  gap: var(--s-1);
+  padding-left: var(--s-6);
+}
+
+.num {
+  color: var(--fg-3);
+}
+
+.node {
+  position: absolute;
+  left: 0;
+  top: 2.05rem;
+  width: 11px;
+  height: 11px;
+  border: 1px solid var(--fg-2);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.step:last-child .node {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.label {
+  font-size: var(--t-xl);
+  line-height: 1.1;
+}
+
+.detail {
+  color: var(--fg-2);
+  font-size: var(--t-sm);
+}
+
+@keyframes travel-y {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(260%);
+    opacity: 0;
+  }
+}
+
+@keyframes travel-x {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(340%);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 760px) {
+  .steps {
+    grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+    gap: var(--s-5);
+  }
+
+  .steps::before,
+  .steps::after {
+    left: 0;
+    right: 0;
+    top: calc(2.05rem + 5px);
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+
+  .steps::after {
+    width: 25%;
+    right: auto;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    animation-name: travel-x;
+  }
+
+  .step {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .node {
+    position: relative;
+    top: auto;
+    margin-block: var(--s-2) var(--s-3);
+  }
+}

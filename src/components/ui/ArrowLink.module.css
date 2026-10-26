@@ -1,0 +1,26 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.link span:first-child {
+  background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 0 1px;
+  transition: background-size var(--d-base) var(--ease-out);
+}
+
+.link:hover span:first-child {
+  background-size: 100% 1px;
+}
+
+.link svg {
+  color: var(--accent);
+  transition: transform var(--d-base) var(--ease-out);
+}
+
+.link:hover svg {
+  transform: translate(2px, -1px);
+}

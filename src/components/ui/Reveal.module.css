@@ -1,0 +1,17 @@
+:global(html.js) .reveal:not([data-in]) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.reveal {
+  transition:
+    opacity 900ms var(--ease-out) var(--delay, 0ms),
+    transform 900ms var(--ease-out) var(--delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.js) .reveal:not([data-in]) {
+    opacity: 1;
+    transform: none;
+  }
+}

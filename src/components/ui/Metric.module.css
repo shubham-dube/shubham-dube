@@ -1,0 +1,19 @@
+.metric {
+  display: grid;
+  gap: var(--s-2);
+  align-content: start;
+}
+
+.value {
+  font-size: var(--t-2xl);
+  line-height: 1;
+}
+
+[data-size='lg'] .value {
+  font-size: var(--t-3xl);
+}
+
+.label {
+  max-width: 22ch;
+  color: var(--fg-3);
+}

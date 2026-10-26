@@ -1,0 +1,137 @@
+.card {
+  display: grid;
+  gap: var(--s-6);
+  padding-block: var(--s-8);
+  border-top: 1px solid var(--line);
+}
+
+.visual {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition:
+    border-color var(--d-base) var(--ease-out),
+    box-shadow var(--d-slow) var(--ease-out);
+}
+
+.visual > svg,
+.visual > img {
+  transition: transform 1.2s var(--ease-out);
+}
+
+.card:hover .visual {
+  border-color: rgb(var(--accent-rgb) / 0.4);
+  box-shadow:
+    var(--shadow),
+    0 30px 80px -40px rgb(var(--accent-rgb) / 0.45);
+}
+
+.card:hover .visual > svg,
+.card:hover .visual > img {
+  transform: scale(1.025);
+}
+
+.cta {
+  position: absolute;
+  left: var(--s-4);
+  bottom: var(--s-4);
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--r-pill);
+  background: var(--fg);
+  color: var(--bg);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity var(--d-base) var(--ease-out),
+    transform var(--d-base) var(--ease-out);
+}
+
+.card:hover .cta {
+  opacity: 1;
+  transform: none;
+}
+
+.body {
+  display: grid;
+  gap: var(--s-4);
+  align-content: center;
+}
+
+.name {
+  font-size: var(--t-3xl);
+  line-height: 0.95;
+}
+
+.name a {
+  transition: color var(--d-fast) var(--ease-out);
+}
+
+.name a:hover {
+  color: var(--fg-2);
+}
+
+.tagline {
+  font-size: var(--t-xl);
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+
+.summary {
+  max-width: 52ch;
+  color: var(--fg-2);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: var(--s-5);
+  padding-block: var(--s-4);
+  border-block: 1px solid var(--line);
+}
+
+.metrics :global(.display) {
+  font-size: var(--t-xl);
+}
+
+.stack {
+  color: var(--fg-3);
+  line-height: 1.8;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-5);
+  margin-top: var(--s-2);
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--s-7);
+    align-items: center;
+  }
+
+  .visual {
+    grid-column: 1 / span 7;
+  }
+
+  .body {
+    grid-column: 8 / span 5;
+  }
+
+  .card[data-flip] .visual {
+    grid-column: 6 / span 7;
+    grid-row: 1;
+  }
+
+  .card[data-flip] .body {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+  }
+}

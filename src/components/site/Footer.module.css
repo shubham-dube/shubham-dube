@@ -1,0 +1,99 @@
+.footer {
+  margin-top: var(--section);
+  padding-top: var(--s-8);
+  border-top: 1px solid var(--line);
+  overflow: clip;
+}
+
+.top {
+  display: grid;
+  gap: var(--s-7);
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-4);
+}
+
+.brand p {
+  display: grid;
+  line-height: 1.4;
+}
+
+.brand strong {
+  font-weight: 500;
+}
+
+.brand span {
+  color: var(--fg-2);
+  font-size: var(--t-sm);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-6);
+}
+
+.cols p {
+  margin-bottom: var(--s-3);
+  color: var(--fg-3);
+}
+
+.cols ul {
+  display: grid;
+  gap: var(--s-2);
+  font-size: var(--t-sm);
+}
+
+.cols a {
+  color: var(--fg-2);
+  transition: color var(--d-fast) var(--ease-out);
+  overflow-wrap: anywhere;
+}
+
+.cols a:hover {
+  color: var(--fg);
+}
+
+.wordmark {
+  margin-top: var(--s-9);
+  font-size: clamp(5rem, 22vw, 21rem);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  color: var(--fg);
+  /* Fades into the page so it reads as a signature, not a heading. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
+  mask-image: linear-gradient(to bottom, #000 30%, transparent 92%);
+  margin-bottom: -0.12em;
+}
+
+.wordmark em {
+  color: var(--accent);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s-3) var(--s-6);
+  padding-block: var(--s-5) var(--s-6);
+  border-top: 1px solid var(--line);
+  color: var(--fg-3);
+}
+
+.bottom a:hover {
+  color: var(--fg);
+}
+
+@media (min-width: 900px) {
+  .top {
+    grid-template-columns: 1fr 1.6fr;
+  }
+
+  .cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

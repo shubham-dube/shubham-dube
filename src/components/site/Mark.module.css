@@ -1,0 +1,12 @@
+.mark {
+  display: inline-block;
+  flex: none;
+  border-radius: 50%;
+  background:
+    radial-gradient(60% 60% at 30% 28%, rgb(255 255 255 / 0.95), transparent 55%),
+    radial-gradient(80% 80% at 70% 80%, var(--accent), transparent 70%),
+    radial-gradient(100% 100% at 50% 50%, #6d7cff 0%, #1a1a22 75%);
+  box-shadow:
+    0 0 0 1px var(--line-strong),
+    0 4px 16px -4px rgb(var(--accent-rgb) / 0.6);
+}

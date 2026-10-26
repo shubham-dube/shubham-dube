@@ -1,0 +1,93 @@
+/*
+ * Design tokens — the only place raw values live. See DESIGN.md.
+ * Components consume the semantic layer (--fg, --surface, --accent …).
+ */
+
+:root {
+  /* ── Type ─────────────────────────────────────────── */
+  --font-display: var(--ff-serif), 'Times New Roman', serif;
+  --font-sans: var(--ff-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--ff-mono), ui-monospace, 'SFMono-Regular', monospace;
+
+  --t-mono: 0.6875rem; /* 11px */
+  --t-sm: 0.875rem;
+  --t-base: 1rem;
+  --t-lg: clamp(1.0625rem, 0.98rem + 0.3vw, 1.25rem);
+  --t-xl: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --t-2xl: clamp(1.875rem, 1.5rem + 1.6vw, 2.875rem);
+  --t-3xl: clamp(2.5rem, 1.8rem + 3.2vw, 4.75rem);
+  --t-hero: clamp(5rem, 2rem + 8.4vw, 10.5rem);
+
+  --tracking-mono: 0.08em;
+  --tracking-display: -0.025em;
+
+  /* ── Space (4px base, then geometric) ─────────────── */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --s-10: 8rem;
+  --s-11: 11rem;
+  --s-12: 14rem;
+  --gutter: clamp(1rem, 0.4rem + 2.6vw, 3rem);
+  --section: clamp(5rem, 3rem + 7vw, 10rem);
+  --max: 1320px;
+  --header-h: 64px;
+
+  /* ── Shape ────────────────────────────────────────── */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* ── Motion ───────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --d-fast: 160ms;
+  --d-base: 320ms;
+  --d-slow: 600ms;
+
+  /* ── Colour: dark (default) ───────────────────────── */
+  color-scheme: dark;
+  --bg: #08080a;
+  --bg-rgb: 8 8 10;
+  --surface: #0f0f12;
+  --surface-2: #16161a;
+  --fg: #edebe6;
+  --fg-2: #a6a49e;
+  --fg-3: #75736e;
+  --line: rgb(237 235 230 / 0.08);
+  --line-strong: rgb(237 235 230 / 0.16);
+  --accent: #ff6b3d;
+  --accent-rgb: 255 107 61;
+  --accent-fg: #0b0705;
+  --accent-soft: rgb(255 107 61 / 0.12);
+  --ok: #5ee6a8;
+  --grain-opacity: 0.05;
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 24px 60px -24px rgb(0 0 0 / 0.6);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f3f1ec;
+  --bg-rgb: 243 241 236;
+  --surface: #faf9f6;
+  --surface-2: #ebe8e1;
+  --fg: #121110;
+  --fg-2: #55534e;
+  --fg-3: #6f6c66;
+  --line: rgb(18 17 16 / 0.09);
+  --line-strong: rgb(18 17 16 / 0.18);
+  --accent: #d9461a;
+  --accent-rgb: 217 70 26;
+  --accent-fg: #fff8f4;
+  --accent-soft: rgb(217 70 26 / 0.1);
+  --ok: #138a5b;
+  --grain-opacity: 0.035;
+  --shadow: 0 1px 0 rgb(255 255 255 / 0.7) inset, 0 24px 60px -30px rgb(40 30 20 / 0.25);
+}

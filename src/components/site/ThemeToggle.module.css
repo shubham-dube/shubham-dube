@@ -1,0 +1,33 @@
+.toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--r-pill);
+  color: var(--fg-2);
+  transition:
+    color var(--d-fast) var(--ease-out),
+    background-color var(--d-fast) var(--ease-out);
+}
+
+.toggle:hover {
+  color: var(--fg);
+  background: var(--surface-2);
+}
+
+.sun,
+.moon {
+  grid-area: 1 / 1;
+  display: inline-flex;
+  transition:
+    transform var(--d-slow) var(--ease-out),
+    opacity var(--d-base) var(--ease-out);
+}
+
+/* Show the icon of the theme you'd switch to. Driven by <html> so it's right before hydration. */
+:global(html[data-theme='dark']) .moon,
+:global(html[data-theme='light']) .sun {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}

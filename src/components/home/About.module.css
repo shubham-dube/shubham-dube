@@ -1,0 +1,127 @@
+.section {
+  padding-top: var(--section);
+}
+
+.layout {
+  display: grid;
+  gap: var(--s-8);
+}
+
+.card {
+  align-self: start;
+  padding: var(--s-5) var(--s-6);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.facts {
+  display: grid;
+}
+
+.facts > div {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: var(--s-4);
+  padding-block: var(--s-4);
+  border-top: 1px solid var(--line);
+  font-size: var(--t-sm);
+}
+
+.facts > div:first-child {
+  border-top: 0;
+}
+
+.facts dt {
+  color: var(--fg-3);
+  padding-top: 0.2em;
+}
+
+.facts dd {
+  display: grid;
+  gap: var(--s-1);
+}
+
+.facts dd span {
+  color: var(--fg-3);
+}
+
+.story {
+  display: grid;
+  gap: var(--s-5);
+  max-width: 62ch;
+  color: var(--fg-2);
+  font-size: var(--t-lg);
+  line-height: 1.6;
+}
+
+.lead {
+  color: var(--fg);
+  font-size: var(--t-xl);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.recognition {
+  margin-top: var(--s-9);
+}
+
+.recognition > h3 {
+  margin-bottom: var(--s-4);
+  color: var(--fg-2);
+}
+
+.award {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: var(--s-1) var(--s-4);
+  align-items: baseline;
+  padding-block: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+
+.year {
+  color: var(--fg-3);
+}
+
+.awardTitle {
+  font-size: var(--t-xl);
+}
+
+.awardDetail {
+  grid-column: 2;
+  color: var(--fg-2);
+  font-size: var(--t-sm);
+}
+
+.awardLink {
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--d-fast) var(--ease-out);
+}
+
+.awardLink:hover {
+  text-decoration-color: var(--accent);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-9);
+  }
+
+  .card {
+    position: sticky;
+    top: calc(var(--header-h) + var(--s-5));
+  }
+
+  .award {
+    grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .awardDetail {
+    grid-column: 3;
+  }
+}
