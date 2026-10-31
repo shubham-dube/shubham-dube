@@ -7,7 +7,7 @@ export const profile: Profile = {
   role: 'Founder & Software Engineer',
   headline: 'I build products end to end: the backend, the app, and the AI that makes them feel effortless.',
   intro:
-    'Co-founder and CEO of CrediTouch. SDE Intern at COPIOUS. I have built four apps that are live on the Play Store, I run a paid API product, and I have and built voice AI, payroll and security tooling from the first schema to production.',
+    'Co-founder and CEO of CrediTouch. SDE Intern at COPIOUS. I have built four apps that are live on the Play Store, I run a paid API product, and I have built voice AI, payroll and security tooling from the first schema to production.',
   about: [
     'I like owning a problem from the first conversation to the last deploy. Before I wrote a line of CrediTouch, I spent three weeks interviewing AR managers and credit controllers. Before I started CodeGuardian, I wrote the PRD and the architecture.',
     'Most of my work sits where products get hard: money that has to reconcile, apps that must work offline, scrapers that have to survive government portals, and AI that has to be right rather than merely fluent.',

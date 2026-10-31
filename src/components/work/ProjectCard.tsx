@@ -24,7 +24,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           {project.award ? <Tag tone="accent">★ {project.award.split(' · ')[0]}</Tag> : null}
           {project.metrics?.[0] && (
             <Tag>
-              {project.metrics[0].value} {project.metrics[0].label.toLowerCase()}
+              {project.metrics[0].value} {project.metrics[0].label}
             </Tag>
           )}
         </div>
